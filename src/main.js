@@ -26,8 +26,8 @@ let gallery = new SimpleLightbox('.gallery a', {
 
 async function handleSubmitForm(event) {
   event.preventDefault();
-  let inputValue = event.target.elements.query.value.trim();
   Loader.show();
+  let inputValue = event.target.elements.query.value.trim();
   //Validate input
   if (inputValue === '') {
     iziToast.show({
@@ -39,9 +39,11 @@ async function handleSubmitForm(event) {
       position: 'topRight',
       timeout: 1000,
     });
+    Loader.hide()
     return;
   }
   if (inputValue.length > 100) {
+    Loader.hide();
     iziToast.show({
       message: 'Поле не может быть больше 100 символов',
       backgroundColor: '#fc3d03',
@@ -51,6 +53,7 @@ async function handleSubmitForm(event) {
       position: 'topRight',
       timeout: 1000,
     });
+    return;
   }
   //End Validate
 
@@ -71,7 +74,7 @@ async function handleSubmitForm(event) {
       position: 'topRight',
       timeout: 1000,
     });
-
+    return;
   } else {
     Loader.hide();
     LoadMore.show();
