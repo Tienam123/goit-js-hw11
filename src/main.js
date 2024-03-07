@@ -70,6 +70,7 @@ async function handleSubmitForm(event) {
       position: 'topRight',
       timeout: 1000,
     });
+    Loader.hide();
   } else {
     Loader.hide();
     LoadMore.show();
