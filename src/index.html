@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon"
+        type="image/svg+xml"
+        href="./img/javascript.svg" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>Homework 12</title>
+  <link rel="stylesheet"
+        href="./css/styles.css" />
+</head>
+<body>
+<form class="js-form">
+  <label>
+    <input autocomplete="off"
+           type="text"
+           name="query"
+           placeholder="Search images ..."
+           class="input">
+  </label>
+  <button type="submit">Search</button>
+</form>
+<ul class="js-gallery gallery">
+</ul>
+<button class="load-more hidden"
+        data-load="load-more">Load more</button>
+<div class="loader-backdrop hidden">
+  <span class="loader"></span>
+</div>
+<script type="module"
+        src="./main.js"></script>
+</body>
+</html>
