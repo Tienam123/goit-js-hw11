@@ -23,7 +23,6 @@ let gallery = new SimpleLightbox('.gallery a', {
   captionPosition: 'bottom',
   captionDelay: 250,
 });
-
 async function handleSubmitForm(event) {
   event.preventDefault();
   Loader.show();

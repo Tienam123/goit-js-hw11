@@ -112,3 +112,10 @@ form input {
 .load-more_disabled {
   background-color: #afbbf6;
 }
+
+html {
+  overflow: scroll;
+}
+html.has-lightbox {
+  overflow: hidden;
+}
