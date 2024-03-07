@@ -1,1 +1,37 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon shortcut" href="javascript.f8e172dd.ico" type="image/x-icon"><title>Homework #10 </title><link rel="stylesheet" href="index.d3a0b97f.css"><script type="module" src="index.33d11ab5.js"></script><script src="index.5a565dc8.js" nomodule defer></script></head><body> <div class="container-fluid"> <header> <a href="index.html"><img src="js-logo-xs.dec74a07.png" alt="JavaScript logo"></a> <div> <h1>Vanilla JavaScript</h1> <p>i.e., JavaScript without any (UI) framework or library</p> </div> </header> <main> <div class="justify-content-center pb-5 row"> <div class="col-5"> <select class="breed-selectContainer" id="breed-select"> </select> </div> </div> <div class="spinner-loader"> <span class="d-block mb-4 spinner-border"></span> <p class="loader text-center">Loading data, please wait...</p> <p class="text-center visually-hidden" id="message">Something went wrong please reload the page</p> </div> <div class="cat-info"> </div> </main> <div class="js-card-container"></div> </div> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon"
+        type="image/svg+xml"
+        href="/vanilla-app-template/assets/javascript-8dac5379.svg" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>Homework 12</title>
+  
+  <script type="module" crossorigin src="/vanilla-app-template/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-b0e94dfd.js">
+  <link rel="stylesheet" href="/vanilla-app-template/assets/vendor-a51daae5.css">
+  <link rel="stylesheet" href="/vanilla-app-template/assets/index-d77457f0.css">
+</head>
+<body>
+<form class="js-form">
+  <label>
+    <input autocomplete="off"
+           type="text"
+           name="query"
+           placeholder="Search images ..."
+           class="input">
+  </label>
+  <button type="submit">Search</button>
+</form>
+<ul class="js-gallery gallery">
+</ul>
+<button class="load-more hidden"
+        data-load="load-more">Load more</button>
+<div class="loader-backdrop hidden">
+  <span class="loader"></span>
+</div>
+
+</body>
+</html>
