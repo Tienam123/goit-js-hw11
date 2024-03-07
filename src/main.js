@@ -61,6 +61,7 @@ async function handleSubmitForm(event) {
   refs.gallery.innerHTML = '';
   const articles = await pixabayApiService.fetchArticles();
   if (!articles.hits.length) {
+    Loader.hide();
     iziToast.show({
       message: 'Sorry, there are no images matching your search query. Please try again!',
       backgroundColor: '#fc3d03',
@@ -70,7 +71,7 @@ async function handleSubmitForm(event) {
       position: 'topRight',
       timeout: 1000,
     });
-    Loader.hide();
+
   } else {
     Loader.hide();
     LoadMore.show();
