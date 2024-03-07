@@ -79,11 +79,9 @@ async function handleSubmitForm(event) {
 }
 
 async function handleLoadMore() {
-  Loader.show();
   LoadMore.disabled();
   const articles = await pixabayApiService.fetchArticles();
   if (articles.hits.length === 0) {
-    Loader.hide();
     LoadMore.hide();
     iziToast.show({
       message: 'Sorry, there are no images matching your search query. Please try again!',
@@ -99,6 +97,5 @@ async function handleLoadMore() {
 
   refs.gallery.insertAdjacentHTML('beforeend', createMarkup(articles.hits));
   gallery.refresh();
-  Loader.hide()
   LoadMore.activate();
 }
